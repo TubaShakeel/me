@@ -35,9 +35,11 @@ def fix_it(moves=True, should_move=True):
     As an extra challenge, see if you can get that down to three.
     """
     if moves and should_move:
-        return "WD-40"
-    elif moves or should_move:
+        return "No Problem"
+    elif moves and not should_move:
         return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
     else:
         return "No Problem"
 
@@ -152,7 +154,7 @@ def loops_4():
     result = []
     for _ in range(10):
         row = [str(i) for i in range(10)]
-    result.append(row)
+        result.append(row)
     return result
 
 
@@ -238,10 +240,11 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    result = []
+    result = [[' '] * 9 for _ in range(5)]  
+
     for i in range(5):
-        row = [' '] * (8 - i) + ['*'] * (2 * i + 1) + [' '] * (8 - i)
-        result.append(row)
+        result[i][4-i:5+i] = ['*'] * (2 * i + 1)  
+
     return result
 
 

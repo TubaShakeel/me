@@ -19,17 +19,20 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
-for word in some_words:
-    print(word)
+#I think this will print "what","does","this","line","do","?"
+for word in some_words: 
+    print(word) #it printed "what","does","this","line","do","?" on seperate lines 
 
+#I think this will print "what","does","this","line","do","?"
 for x in some_words:
-    print(x)
+    print(x) #it printed "what","does","this","line","do","?" on seperate lines 
 
-print(some_words)
+#I think this will print ['what' , 'does' , 'this' , 'line' , 'do' , '?']
+print(some_words) # it printed ['what', 'does', 'this', 'line', 'do', '?']
 
+# I think it will print "some_words contains more than 3 words"
 if len(some_words) > 3:
-    print("some_words contains more than 3 words")
-
+    print("some_words contains more than 3 words") #it printed "some_words contains more than 3 words"
 
 def usefulFunction():
     """

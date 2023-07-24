@@ -243,7 +243,7 @@ def random_filler_text(number_of_words=200) -> str:
     for _ in range(number_of_words):
         word_length = random.randint(3, 7)
         random_word = random.choice(my_dict[word_length])
-        words.append(random_word.)
+        words.append(random_word)
 
     return " ".join(words)
 
@@ -279,7 +279,7 @@ def fast_filler(number_of_words=200) -> str:
     for _ in range(number_of_words):
         word_length = random.randint(3, 7)
         random_word = random.choice(my_dict[str(word_length)])
-        words.append(random_word.upper()+'.')
+        words.append(random_word.capitalize()+'.')
 
     return " ".join(words)
 

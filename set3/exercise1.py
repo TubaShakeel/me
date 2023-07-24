@@ -17,7 +17,19 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    if stop is None:
+        stop = start
+        start = 0
+
+    if step <= 0:
+        return []
+
+    numbers = []
+    while start < stop:
+        numbers.append(start)
+        start += step
+
+    return numbers
 
 
 def two_step_ranger(start, stop):
@@ -28,7 +40,7 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    return list(range(start, stop, 2))
 
 
 def stubborn_asker(low, high):
